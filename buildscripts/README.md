@@ -12,11 +12,19 @@ If you're running on Debian/Ubuntu or RHEL/Fedora it will also install the neces
 
 ## Build
 
+**NOTE: Trying to build on MacOS? Check out the MacOS specifics below**
+
 ```
 ./buildall.sh
 ```
 
 Run `buildall.sh` with `--clean` to clean the build directories before building.
+
+If you have a 64-bit device (such as a Note 9 like me), building is done using the following two steps, use `--clean` as well if needed:
+```
+./buildall.sh --arch arm64 mpv
+./buildall.sh --arch arm64 mpv-android
+```
 
 Building for just 32-bit ARM (which is the default) is fine generally.
 However if you want to make use of AArch64 or are targeting Intel x86 devices,
@@ -27,6 +35,11 @@ To do this run one (or both) of these commands **before** ./buildall.sh:
 ./buildall.sh --arch arm64 mpv
 ./buildall.sh --arch x86_64 mpv
 ```
+### MacOS Build Specifics
+The parent project of this repo has limited documentation for building on MacOS. Some things that helped me solve my issues were:
+1. Installing `ffmpeg` using homebrew
+2. Installing `meson` and `ninja` using `pip3`
+3. Following this stackoverflow issue if you have a JRE problem: https://stackoverflow.com/questions/55286542/kotlin-could-not-find-the-required-jdk-tools-in-the-java-installation
 
 # Developing
 
@@ -48,7 +61,7 @@ If you've made changes to a single component (e.g. ffmpeg or mpv) and want a new
 
 Note that you might need to be rebuild for other architectures (`--arch`) too depending on your device.
 
-Afterwards, build mpv-android and install the apk:
+Afterwards, build mpv-android and install the apk *(install platform-tools to use adb)*:
 
 ```
 ./buildall.sh --no-deps
