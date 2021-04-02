@@ -1,4 +1,4 @@
-package `is`.xyz.mpv
+package `is`.simplevid.simplevid
 
 import android.app.AlertDialog
 import android.content.Intent
@@ -17,8 +17,8 @@ import android.os.Environment
 import android.util.Log
 import androidx.recyclerview.widget.RecyclerView
 
-import `is`.xyz.filepicker.AbstractFilePickerFragment
-import `is`.xyz.mpv.config.SettingsActivity
+import `is`.simplevid.filepicker.AbstractFilePickerFragment
+import `is`.simplevid.simplevid.config.SettingsActivity
 
 import java.io.File
 import java.io.FileFilter

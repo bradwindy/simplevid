@@ -1,4 +1,4 @@
-package is.xyz.mpv;
+package is.simplevid.simplevid;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBar;
@@ -7,7 +7,7 @@ import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.View;
 
-import is.xyz.filepicker.FilePickerFragment;
+import is.simplevid.filepicker.FilePickerFragment;
 
 import java.io.File;
 

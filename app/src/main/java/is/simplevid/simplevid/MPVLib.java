@@ -1,4 +1,4 @@
-package is.xyz.mpv;
+package is.simplevid.simplevid;
 
 // Wrapper for native library
 

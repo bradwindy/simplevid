@@ -10,8 +10,9 @@ android {
         // Do NOT bump this to 30 before figuring out the implications of scoped storage
         targetSdkVersion 29
         versionCode 24
-        versionName "2021-03-10-release"
+        versionName "1.0.0"
         vectorDrawables.useSupportLibrary = true
+        applicationId "net.windybank.simplevid"
     }
     sourceSets {
         main {

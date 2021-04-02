@@ -1,4 +1,4 @@
-package `is`.xyz.mpv
+package `is`.simplevid.simplevid
 
 import android.annotation.SuppressLint
 import android.app.Activity

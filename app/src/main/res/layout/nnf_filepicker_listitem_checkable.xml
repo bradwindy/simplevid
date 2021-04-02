@@ -35,14 +35,14 @@
         android:layout_height="?android:listPreferredItemHeight"
         android:adjustViewBounds="true"
         android:scaleType="fitCenter"
-        android:src="@drawable/nnf_ic_folder_black_48dp"
+        android:src="@drawable/outline_folder_24"
         app:tint="?attr/colorAccent"
         android:visibility="visible"
         tools:ignore="ContentDescription" />
 
     <TextView
         android:id="@android:id/text1"
-        style="?android:textAppearanceLarge"
+        style="?android:textAppearanceListItem"
         android:layout_width="0dp"
         android:layout_height="match_parent"
         android:layout_weight="1"

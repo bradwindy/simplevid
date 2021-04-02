@@ -1,4 +1,4 @@
-package `is`.xyz.mpv
+package `is`.simplevid.simplevid
 
 import android.view.LayoutInflater
 import android.view.View

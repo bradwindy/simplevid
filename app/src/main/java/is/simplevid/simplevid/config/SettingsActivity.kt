@@ -1,7 +1,7 @@
-package `is`.xyz.mpv.config
+package `is`.simplevid.simplevid.config
 
 
-import `is`.xyz.mpv.R
+import `is`.simplevid.simplevid.R
 import android.content.Context
 import android.content.res.Configuration
 import android.os.Build

@@ -4,7 +4,7 @@
  * file, You can obtain one at http://mozilla.org/MPL/2.0/.
  */
 
-package is.xyz.filepicker;
+package is.simplevid.filepicker;
 
 import android.net.Uri;
 import androidx.annotation.NonNull;

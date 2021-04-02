@@ -1,4 +1,4 @@
-package is.xyz.filepicker;
+package is.simplevid.filepicker;
 
 import androidx.annotation.NonNull;
 

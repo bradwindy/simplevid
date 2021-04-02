@@ -1,4 +1,4 @@
-package is.xyz.filepicker;
+package is.simplevid.filepicker;
 
 import android.graphics.Canvas;
 import android.graphics.Rect;

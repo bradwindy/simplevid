@@ -4,9 +4,9 @@
  * file, You can obtain one at http://mozilla.org/MPL/2.0/.
  */
 
-package is.xyz.filepicker;
+package is.simplevid.filepicker;
 
-import is.xyz.mpv.R;
+import is.simplevid.simplevid.R;
 
 import android.Manifest;
 import android.content.pm.PackageManager;

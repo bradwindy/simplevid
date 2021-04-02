@@ -1,8 +1,8 @@
-package `is`.xyz.mpv.config
+package `is`.simplevid.simplevid.config
 
-import `is`.xyz.mpv.BuildConfig
-import `is`.xyz.mpv.MPVLib
-import `is`.xyz.mpv.R
+import `is`.simplevid.simplevid.BuildConfig
+import `is`.simplevid.simplevid.MPVLib
+import `is`.simplevid.simplevid.R
 import android.content.Context
 import android.util.AttributeSet
 import android.preference.DialogPreference

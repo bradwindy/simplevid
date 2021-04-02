@@ -1,6 +1,6 @@
-package `is`.xyz.mpv
+package `is`.simplevid.simplevid
 
-import `is`.xyz.filepicker.AbstractFilePickerFragment
+import `is`.simplevid.filepicker.AbstractFilePickerFragment
 import android.app.AlertDialog
 import android.content.Intent
 import android.os.Bundle
