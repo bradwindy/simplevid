@@ -1,7 +1,7 @@
 package `is`.simplevid.simplevid
 
 import android.annotation.SuppressLint
-import android.app.Activity
+import androidx.appcompat.app.AppCompatActivity
 import android.content.Context
 import android.net.Uri
 import android.os.Build
@@ -17,7 +17,7 @@ import java.io.File
 import kotlin.math.abs
 
 object Utils {
-    fun hasSoftwareKeys(activity: Activity): Boolean {
+    fun hasSoftwareKeys(activity: AppCompatActivity): Boolean {
         // Detect whether device has software home button
         // https://stackoverflow.com/questions/14853039/#answer-14871974
         val disp = activity.windowManager.defaultDisplay
@@ -51,7 +51,7 @@ object Utils {
         return "%d:%02d:%02d".format(hours, minutes, seconds)
     }
 
-    fun getScreenBrightness(activity: Activity): Float? {
+    fun getScreenBrightness(activity: AppCompatActivity): Float? {
         // check if window has brightness set
         val lp = activity.window.attributes
         if (lp.screenBrightness >= 0f)

@@ -17,21 +17,26 @@
 
     <application
         android:allowBackup="true"
-        android:resizeableActivity="true"
-        android:requestLegacyExternalStorage="true"
         android:icon="@mipmap/mpv_launcher_icon"
-        android:roundIcon="@mipmap/mpv_launcher_icon"
-        android:label="@string/mpv_activity">
+        android:label="@string/mpv_activity"
+        android:requestLegacyExternalStorage="true"
+        android:resizeableActivity="true"
+        android:roundIcon="@mipmap/mpv_launcher_icon">
+        <activity
+            android:name=".config.AppSettingsActivity"
+            android:label="@string/title_activity_app_settings"
+            android:theme="@style/SettingsTheme" />
         <!-- Multi-window support on some devices -->
-        <meta-data android:name="com.samsung.android.sdk.multiwindow.enable"
+        <meta-data
+            android:name="com.samsung.android.sdk.multiwindow.enable"
             android:value="true" />
-        <meta-data android:name="com.lge.support.SPLIT_WINDOW"
+        <meta-data
+            android:name="com.lge.support.SPLIT_WINDOW"
             android:value="true" />
 
         <activity
-            android:name="is.simplevid.simplevid.MPVActivity"
+            android:name=".MPVActivity"
             android:configChanges="orientation|screenLayout|screenSize|smallestScreenSize|keyboardHidden|keyboard"
-            android:supportsPictureInPicture="true"
             android:launchMode="singleTask"
             android:theme="@style/AppTheme">
             <intent-filter> <!-- Media protocols -->
@@ -92,7 +97,6 @@
                 <data android:pathPattern=".*\\..*\\..*\\..*\\..*\\.mkv" />
                 <data android:pathPattern=".*\\..*\\..*\\..*\\..*\\..*\\.mkv" />
                 <data android:pathPattern=".*\\..*\\..*\\..*\\..*\\..*\\..*\\.mkv" />
-
                 <data android:pathPattern=".*\\.mp4" />
                 <data android:pathPattern=".*\\..*\\.mp4" />
                 <data android:pathPattern=".*\\..*\\..*\\.mp4" />
@@ -100,7 +104,6 @@
                 <data android:pathPattern=".*\\..*\\..*\\..*\\..*\\.mp4" />
                 <data android:pathPattern=".*\\..*\\..*\\..*\\..*\\..*\\.mp4" />
                 <data android:pathPattern=".*\\..*\\..*\\..*\\..*\\..*\\..*\\.mp4" />
-
                 <data android:pathPattern=".*\\.webm" />
                 <data android:pathPattern=".*\\..*\\.webm" />
                 <data android:pathPattern=".*\\..*\\..*\\.webm" />
@@ -108,7 +111,6 @@
                 <data android:pathPattern=".*\\..*\\..*\\..*\\..*\\.webm" />
                 <data android:pathPattern=".*\\..*\\..*\\..*\\..*\\..*\\.webm" />
                 <data android:pathPattern=".*\\..*\\..*\\..*\\..*\\..*\\..*\\.webm" />
-
                 <data android:pathPattern=".*\\.avi" />
                 <data android:pathPattern=".*\\..*\\.avi" />
                 <data android:pathPattern=".*\\..*\\..*\\.avi" />
@@ -116,7 +118,6 @@
                 <data android:pathPattern=".*\\..*\\..*\\..*\\..*\\.avi" />
                 <data android:pathPattern=".*\\..*\\..*\\..*\\..*\\..*\\.avi" />
                 <data android:pathPattern=".*\\..*\\..*\\..*\\..*\\..*\\..*\\.avi" />
-
                 <data android:pathPattern=".*\\.flac" />
                 <data android:pathPattern=".*\\..*\\.flac" />
                 <data android:pathPattern=".*\\..*\\..*\\.flac" />
@@ -124,7 +125,6 @@
                 <data android:pathPattern=".*\\..*\\..*\\..*\\..*\\.flac" />
                 <data android:pathPattern=".*\\..*\\..*\\..*\\..*\\..*\\.flac" />
                 <data android:pathPattern=".*\\..*\\..*\\..*\\..*\\..*\\..*\\.flac" />
-
                 <data android:pathPattern=".*\\.mp3" />
                 <data android:pathPattern=".*\\..*\\.mp3" />
                 <data android:pathPattern=".*\\..*\\..*\\.mp3" />
@@ -132,7 +132,6 @@
                 <data android:pathPattern=".*\\..*\\..*\\..*\\..*\\.mp3" />
                 <data android:pathPattern=".*\\..*\\..*\\..*\\..*\\..*\\.mp3" />
                 <data android:pathPattern=".*\\..*\\..*\\..*\\..*\\..*\\..*\\.mp3" />
-
                 <data android:pathPattern=".*\\.ogg" />
                 <data android:pathPattern=".*\\..*\\.ogg" />
                 <data android:pathPattern=".*\\..*\\..*\\.ogg" />
@@ -140,7 +139,6 @@
                 <data android:pathPattern=".*\\..*\\..*\\..*\\..*\\.ogg" />
                 <data android:pathPattern=".*\\..*\\..*\\..*\\..*\\..*\\.ogg" />
                 <data android:pathPattern=".*\\..*\\..*\\..*\\..*\\..*\\..*\\.ogg" />
-
                 <data android:pathPattern=".*\\.m3u8*" />
                 <data android:pathPattern=".*\\..*\\.m3u8*" />
                 <data android:pathPattern=".*\\..*\\..*\\.m3u8*" />
@@ -151,12 +149,14 @@
             </intent-filter>
             <intent-filter> <!-- Share action -->
                 <action android:name="android.intent.action.SEND" />
+
                 <category android:name="android.intent.category.DEFAULT" />
+
                 <data android:mimeType="text/plain" />
             </intent-filter>
         </activity>
         <activity
-            android:name="is.simplevid.simplevid.MainActivity"
+            android:name=".MainActivity"
             android:configChanges="orientation|screenSize"
             android:theme="@style/FilePickerTheme">
             <intent-filter>
@@ -167,19 +167,21 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="is.simplevid.simplevid.FilePickerActivity"
+            android:name=".FilePickerActivity"
             android:configChanges="orientation|screenSize"
+            android:exported="false"
             android:screenOrientation="behind"
-            android:theme="@style/FilePickerDialogTheme"
-            android:exported="false" />
-        <activity
-            android:name="is.simplevid.simplevid.config.SettingsActivity"
-            android:label="@string/title_activity_settings" />
+            android:theme="@style/FilePickerDialogTheme" />
+
+
         <service
-            android:name="is.simplevid.simplevid.BackgroundPlaybackService"
-            android:foregroundServiceType="mediaPlayback"
-            android:exported="false" />
-        <receiver android:name="is.simplevid.simplevid.NotificationButtonReceiver" android:exported="false">
+            android:name=".BackgroundPlaybackService"
+            android:exported="false"
+            android:foregroundServiceType="mediaPlayback" />
+
+        <receiver
+            android:name=".NotificationButtonReceiver"
+            android:exported="false">
             <intent-filter>
                 <action android:name="is.xyz.mpv.PLAY_PAUSE" />
                 <action android:name="is.xyz.mpv.ACTION_PREV" />

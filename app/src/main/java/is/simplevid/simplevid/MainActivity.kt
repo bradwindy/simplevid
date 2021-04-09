@@ -1,6 +1,6 @@
 package `is`.simplevid.simplevid
 
-import android.app.AlertDialog
+import androidx.appcompat.app.AlertDialog
 import android.content.Intent
 import android.os.Bundle
 import android.preference.PreferenceManager
@@ -18,7 +18,7 @@ import android.util.Log
 import androidx.recyclerview.widget.RecyclerView
 
 import `is`.simplevid.filepicker.AbstractFilePickerFragment
-import `is`.simplevid.simplevid.config.SettingsActivity
+import `is`.simplevid.simplevid.config.AppSettingsActivity
 
 import java.io.File
 import java.io.FileFilter
@@ -152,8 +152,8 @@ class MainActivity : AppCompatActivity(), AbstractFilePickerFragment.OnFilePicke
                 show()
             }
         } else if (id == R.id.action_settings) {
-            val i = Intent(this, SettingsActivity::class.java)
-            startActivity(i)
+            val intent = Intent(this, AppSettingsActivity::class.java)
+            startActivity(intent)
             return true
         }
         return false
